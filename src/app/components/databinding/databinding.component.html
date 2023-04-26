@@ -1,0 +1,17 @@
+<p>databinding works!</p>
+<div>my name is {{ name }}</div>
+<img src="{{ img_url }}" />
+<img [src]="img_url" />
+<!--property binding-->
+<hr>
+<input type="text" value="Srisai Ganesh" />
+<input value="{{ name }}" />
+<input [value]="name" />
+<input bind-value="name"/>
+<hr>
+<button disabled='{{flag}}' class="btn btn-primary">Button 1</button> <!-- interpolation binding doesn't work with boolean values-->
+<button [disabled]="flag" class="btn btn-primary ms-1">Button 2</button>
+<button bind-disabled="flag" class="btn btn-primary ms-1">Button 3</button>
+<button (click)="f1()" class="btn btn-secondary">Button 4</button>
+<button on-click="f1()" class="btn btn-secondary">Button 5</button> <!--"on-click is angular" onclick is JS-->
+
