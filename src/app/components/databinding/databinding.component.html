@@ -14,4 +14,10 @@
 <button bind-disabled="flag" class="btn btn-primary ms-1">Button 3</button>
 <button (click)="f1()" class="btn btn-secondary">Button 4</button>
 <button on-click="f1()" class="btn btn-secondary">Button 5</button> <!--"on-click is angular" onclick is JS-->
-
+<hr>
+<h1 [hidden]="flag">This is a paragraph</h1>
+<button (click)="this.flag = !this.flag">{{flag ? 'Show' : 'Hide'}}</button>
+<hr>
+<input type="{{flag? 'text' : 'password'}}">
+<input type="checkbox" (change)="this.flag=!this.flag"> {{flag ? 'Hide' : 'Show'}} Password <br/>
+<button (click)="this.flag = !this.flag">{{flag ? 'Hide' : 'Show'}} Password</button>
