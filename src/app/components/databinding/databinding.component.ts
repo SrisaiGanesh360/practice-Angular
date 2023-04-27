@@ -15,4 +15,11 @@ export class DatabindingComponent {
   }
   a: number = 20;
   b: number = 10;
+  t: string = '';
+  maxChar: number = 1000;
+
+  addResult: number = 0;
+  addition(num1: number, num2: number) {
+    this.addResult = num1 + num2;
+  }
 }

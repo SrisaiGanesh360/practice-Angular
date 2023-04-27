@@ -3,32 +3,43 @@
 <img src="{{ img_url }}" />
 <img [src]="img_url" />
 <!--property binding-->
-<hr>
-<input type="text" value="Srisai Ganesh" class="ms-1"/>
-<input value="{{ name }}" class="ms-1"/>
-<input [value]="name" class="ms-1"/>
-<input bind-value="name" class="ms-1"/><br/>
-2-way <input [(ngModel)]="name" class="ms-1"/>
-<hr>
-<button disabled='{{flag}}' class="btn btn-primary">Button 1</button> <!-- interpolation binding doesn't work with boolean values-->
+<hr />
+<input type="text" value="Srisai Ganesh" class="ms-1" />
+<input value="{{ name }}" class="ms-1" />
+<input [value]="name" class="ms-1" />
+<input bind-value="name" class="ms-1" /><br />
+2-way <input [(ngModel)]="name" class="ms-1" />
+<hr />
+<button disabled="{{ flag }}" class="btn btn-primary">Button 1</button>
+<!-- interpolation binding doesn't work with boolean values-->
 <button [disabled]="flag" class="btn btn-primary ms-1">Button 2</button>
 <button bind-disabled="flag" class="btn btn-primary ms-1">Button 3</button>
 <button (click)="f1()" class="btn btn-secondary">Button 4</button>
-<button on-click="f1()" class="btn btn-secondary">Button 5</button> <!--"on-click is angular" onclick is JS-->
-<hr>
+<button on-click="f1()" class="btn btn-secondary">Button 5</button>
+<!--"on-click is angular" onclick is JS-->
+<hr />
 <h1 [hidden]="flag">This is a paragraph</h1>
-<button (click)="this.flag = !this.flag">{{flag ? 'Show' : 'Hide'}}</button>
-<hr>
-<input type="{{flag? 'text' : 'password'}}">
-<input type="checkbox" (change)="this.flag=!this.flag"> {{flag ? 'Hide' : 'Show'}} Password <br/>
-<button (click)="this.flag = !this.flag">{{flag ? 'Hide' : 'Show'}} Password</button>
-<hr>
-<p>Number:1 <input type="number" [(ngModel)]="a"></p>
-<p>Number:2 <input type="number" [(ngModel)]="b"></p>
-<div>Addition of {{a}} and {{b}} is {{a+b}}</div>
-<div>Subtraction of {{a}} and {{b}} is {{a-b}}</div>
-<div>Multiplication of {{a}} and {{b}} is {{a*b}}</div>
-<div>Division of {{a}} and {{b}} is {{a/b}}</div>
-<hr>
+<button (click)="this.flag = !this.flag">{{ flag ? "Show" : "Hide" }}</button>
+<hr />
+<input type="{{ flag ? 'text' : 'password' }}" />
+<input type="checkbox" (change)="this.flag = !this.flag" />
+{{ flag ? "Hide" : "Show" }} Password <br />
+<button (click)="this.flag = !this.flag">
+  {{ flag ? "Hide" : "Show" }} Password
+</button>
+<hr />
+<p>Number:1 <input type="number" [(ngModel)]="a" /></p>
+<p>Number:2 <input type="number" [(ngModel)]="b" /></p>
+<div>Addition of {{ a }} and {{ b }} is {{ a + b }}</div>
+<div>Subtraction of {{ a }} and {{ b }} is {{ a - b }}</div>
+<div>Multiplication of {{ a }} and {{ b }} is {{ a * b }}</div>
+<div>Division of {{ a }} and {{ b }} is {{ a / b }}</div>
+<hr />
 <h2>Enter Text</h2>
-<textarea name="Enter text" id="" cols="30" rows="10" maxlength="100" [(ng Model)]="t"></textarea>
+<textarea cols="30" rows="10" [(ngModel)]="t" [maxlength]="maxChar"></textarea>
+<div>Remaining characters: {{ maxChar - t.length }}</div>
+<hr/>
+<p>Number1: <input type="number" #num1></p>
+<p>Number2: <input type="number" #num2></p>
+<button class="btn btn-primary" (click)="addition(+num1.value , +num2.value)">Add</button>
+<p>Addition is {{addResult}}</p>
