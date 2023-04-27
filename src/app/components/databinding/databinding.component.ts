@@ -18,8 +18,17 @@ export class DatabindingComponent {
   t: string = '';
   maxChar: number = 1000;
 
-  addResult: number = 0;
+  Result: string = '';
   addition(num1: number, num2: number) {
-    this.addResult = num1 + num2;
+    this.Result = `Addtion of ${num1} and ${num2} is ${num1 + num2}`;
+  }
+  subtraction(num1: number, num2: number) {
+    this.Result = `Subtraction of ${num1}  and ${num2} is ${num1 - num2}`;
+  }
+  mutiplication(num1: number, num2: number) {
+    this.Result = `Mutiplication of ${num1}  and ${num2} is ${num1 * num2}`;
+  }
+  division(num1: number, num2: number) {
+    this.Result = `Division of ${num1}  and ${num2} is ${num1 / num2}`;
   }
 }
