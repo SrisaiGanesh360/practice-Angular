@@ -11,6 +11,7 @@ import { CarousalComponent } from './components/carousal/carousal.component';
 import { ElectronicsComponent } from './components/electronics/electronics.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './components/directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     CarousalComponent,
     ElectronicsComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
