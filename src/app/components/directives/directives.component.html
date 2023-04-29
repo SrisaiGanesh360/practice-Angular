@@ -1,1 +1,45 @@
-<p>directives works!</p>
+<div *ngIf="n % 2 === 0; else oddBlock">{{ n }} is Even</div>
+<ng-template #oddBlock> {{ n }} is Odd </ng-template>
+
+<div *ngIf="flag">
+  <!--Element will be deleted in DOM-->
+  This controlled by ngIf
+</div>
+<div [hidden]="!flag">
+  <!--Element will be available in DOM-->
+  This is controlled by Hidden
+</div>
+<hr />
+<h1 [ngSwitch]="dayNumber">
+  <p *ngSwitchCase="1">Today is Monday</p>
+  <p *ngSwitchCase="2">Today is Tuesday</p>
+  <p *ngSwitchCase="3">Today is Wednesday</p>
+  <p *ngSwitchCase="4">Today is Thursday</p>
+  <p *ngSwitchCase="5">Today is Friday</p>
+  <p *ngSwitchCase="6">Today is Saturday</p>
+  <p *ngSwitchCase="7">Today is Sunday</p>
+  <p *ngSwitchDefault>Not a valid input</p>
+</h1>
+<hr />
+<ul>
+  <li *ngFor="let car of cars">{{ car }}</li>
+</ul>
+<h2>Select a country</h2>
+<select [(ngModel)]="selectedCountry">
+  <option *ngFor="let country of country_list">{{ country }}</option>
+</select>
+<p>You have selected {{ selectedCountry }}</p>
+<hr />
+<h2>Select a state</h2>
+<select [(ngModel)]="selectedState">
+  <option *ngFor="let state of states" [value]="state.val">
+    {{ state.name }}
+  </option>
+</select>
+<p>You have selected {{ selectedState }}</p>
+<hr />
+<input list="countries"  [(ngModel)]="selectedCountry2"/>
+<datalist id="countries">
+  <option *ngFor="let country of country_list">{{ country }}</option>
+</datalist>
+<p>You have selected {{ selectedCountry2 }}</p>
