@@ -12,6 +12,7 @@ import { ElectronicsComponent } from './components/electronics/electronics.compo
 import { DatabindingComponent } from './components/databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './components/directives/directives.component';
+import { ProductsComponent } from './components/products/products.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DirectivesComponent } from './components/directives/directives.componen
     CarousalComponent,
     ElectronicsComponent,
     DatabindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
