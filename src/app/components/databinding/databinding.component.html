@@ -42,8 +42,8 @@
 <h1>Calculator</h1>
 <p>Number1: <input type="number" #num1></p>
 <p>Number2: <input type="number" #num2></p>
-<button class="btn btn-primary ms-1" (click)="addition(+num1.value , +num2.value)" >Add</button> <!--when we take variable from num1 num2 they become string even if we mentioned them as numbers, so use + before num1.value and num2.value-->
-<button class="btn btn-primary ms-1" (click)="subtraction(+num1.value , +num2.value)">Sub</button> <!--when we take variable from num1 num2 they become string even if we mentioned them as numbers, so use + before num1.value and num2.value-->
-<button class="btn btn-primary ms-1" (click)="mutiplication(+num1.value , +num2.value)">Mul</button> <!--when we take variable from num1 num2 they become string even if we mentioned them as numbers, so use + before num1.value and num2.value-->
-<button class="btn btn-primary ms-1" (click)="division(+num1.value , +num2.value)">Div</button> <!--when we take variable from num1 num2 they become string even if we mentioned them as numbers, so use + before num1.value and num2.value-->
+<button class="btn btn-primary ms-1" (click)="addition(+num1.value , +num2.value)" >+</button> <!--when we take variable from num1 num2 they become string even if we mentioned them as numbers, so use + before num1.value and num2.value-->
+<button class="btn btn-primary ms-1" (click)="subtraction(+num1.value , +num2.value)">-</button> <!--when we take variable from num1 num2 they become string even if we mentioned them as numbers, so use + before num1.value and num2.value-->
+<button class="btn btn-primary ms-1" (click)="mutiplication(+num1.value , +num2.value)">&#215;</button> <!--when we take variable from num1 num2 they become string even if we mentioned them as numbers, so use + before num1.value and num2.value-->
+<button class="btn btn-primary ms-1" (click)="division(+num1.value , +num2.value)">&#247;</button> <!--when we take variable from num1 num2 they become string even if we mentioned them as numbers, so use + before num1.value and num2.value-->
 <p>{{Result}}</p>
