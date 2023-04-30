@@ -249,5 +249,27 @@ export class ProductsComponent {
        "count": 145
      }
    }
- ]
+ ];
+ employees = [
+  { eId: 101, name: 'Varun', sal: 5000},
+  { eId: 102, name: 'Rama', sal: 6000},
+  { eId: 103, name: 'Teja', sal: 3000},
+  { eId: 104, name: 'Vijay', sal: 8000},
+  { eId: 105, name: 'Surya', sal: 2000},
+];
+
+updatetable(){
+  this.employees = [
+    { eId: 101, name: 'Varun', sal: 5000},
+    { eId: 102, name: 'Rama', sal: 6000},
+    { eId: 103, name: 'Teja', sal: 3000},
+    { eId: 104, name: 'Vijay', sal: 8000},
+    { eId: 105, name: 'Surya', sal: 1000},
+    { eId: 106, name: 'Srija', sal: 1500},
+  ];
 }
+trackByEmpId(employee: any){
+  return employee.eId;
+}
+}
+

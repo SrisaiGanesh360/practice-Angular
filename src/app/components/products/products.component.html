@@ -1,15 +1,41 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-3" *ngFor="let product of products" >
+    <div class="col-sm-3" *ngFor="let product of products">
       <div class="card text-center" style="width: 18rem">
-        <img [src]="product.image" class="card-img-top" alt="..." style="height:200px"/>
+        <img
+          [src]="product.image"
+          class="card-img-top"
+          alt="..."
+          style="height: 200px"
+        />
         <div class="card-body">
-          <h5 class="card-title">{{product.title}}r</h5>
-          <p class="card-text">{{product.category}}</p>
-          <p class="card-text">&#8377;{{product.price}}</p>
+          <h5 class="card-title">{{ product.title }}r</h5>
+          <p class="card-text">{{ product.category }}</p>
+          <p class="card-text">&#8377;{{ product.price }}</p>
           <a href="#" class="btn btn-primary">Buy now</a>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Emp ID</th>
+      <th>Name</th>
+      <th>Sal</th>
+      <th>S.No</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees; let ind = index; trackBy: trackByEmpId;">
+      <td>{{ emp.eId }}</td>
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.sal }}</td>
+      <td>{{ ind }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="updatetable()">Update Table data</button>
