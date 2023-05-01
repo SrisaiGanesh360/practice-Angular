@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./directives.component.css'],
 })
 export class DirectivesComponent {
-  n: number = 4;
+  n: number = 7;
   flag: boolean = true;
   dayNumber = new Date().getDay();
   day: number = 0;

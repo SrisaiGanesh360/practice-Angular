@@ -38,8 +38,27 @@
 </select>
 <p>You have selected {{ selectedState }}</p>
 <hr />
-<input list="countries"  [(ngModel)]="selectedCountry2"/>
+<input list="countries" [(ngModel)]="selectedCountry2" />
 <datalist id="countries">
   <option *ngFor="let country of country_list">{{ country }}</option>
 </datalist>
 <p>You have selected {{ selectedCountry2 }}</p>
+<hr />
+
+<h2>Dynamic CSS</h2>
+<p [style.color]="n % 2 == 0 ? 'blue' : 'red'">
+  Add a style dynamically {{ n }}
+</p>
+<p [style.fontSize.px]="8">Add style with unit</p>
+<p [style.background-color]="flag ? 'green' : 'blue'">
+  Add style conditionally
+</p>
+<p
+  [ngStyle]="
+    n % 2 === 0
+      ? { color: 'blue', border: '5px dashed green' }
+      : { color: 'red', border: '5px dashed yellow' }
+  "
+>
+  {{ n }} is {{ n % 2 === 0 ? "Even" : "Odd" }}
+</p>
