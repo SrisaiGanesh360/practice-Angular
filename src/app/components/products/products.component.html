@@ -1,8 +1,9 @@
-<div>
-  <input type="checkbox" (change)="this.flag = !this.flag" />
-  {{ flag ? "Table" : "Card" }} <br />
+<div class="ms-1">
+  <br/>
+  <button (click)="this.flag = !this.flag" class="ms-1">
+  Show {{ flag ? "Card" : "Table" }} </button> <br />
 </div>
-
+<br/>
 <div *ngIf="flag; else elseBlock">
 <table class="table table-bordered table-striped">
   <thead>
@@ -50,6 +51,7 @@
 </ng-template>
 
 <hr>
+<h2>Employee table</h2>
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
