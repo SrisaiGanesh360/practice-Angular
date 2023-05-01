@@ -1,0 +1,29 @@
+<h1 class="text-center bg-primary text-white">User List</h1>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th *ngFor="let colName of colNames">
+        <!--Using keys to do it dynamically-->
+        {{ colName }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <!--Itterating Rows-->
+      <!-- <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.address.city}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.website}}</td>
+        <td>{{user.company.name}}</td> -->
+      <td *ngFor="let entry of user | keyvalue">
+        <!--Itterating (objects) Columns-->
+        {{ entry.value }} <!--is an object having key and value-->
+      </td>
+    </tr>
+  </tbody>
+</table>
