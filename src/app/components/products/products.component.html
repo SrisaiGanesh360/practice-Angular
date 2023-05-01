@@ -1,24 +1,55 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-3" *ngFor="let product of products">
-      <div class="card text-center" style="width: 18rem">
-        <img
-          [src]="product.image"
-          class="card-img-top"
-          alt="..."
-          style="height: 200px"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ product.title }}r</h5>
-          <p class="card-text">{{ product.category }}</p>
-          <p class="card-text">&#8377;{{ product.price }}</p>
-          <a href="#" class="btn btn-primary">Buy now</a>
+<div>
+  <input type="checkbox" (change)="this.flag = !this.flag" />
+  {{ flag ? "Table" : "Card" }} <br />
+</div>
+
+<div *ngIf="flag; else elseBlock">
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.title }}</td>
+      <td>{{ product.category }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.rating.rate }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<ng-template #elseBlock> 
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3" *ngFor="let product of products">
+        <div class="card text-center" style="width: 18rem">
+          <img
+            [src]="product.image"
+            class="card-img-top"
+            alt="..."
+            style="height: 200px"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ product.title }}r</h5>
+            <p class="card-text">{{ product.category }}</p>
+            <p class="card-text">&#8377;{{ product.price }}</p>
+            <a href="#" class="btn btn-primary">Buy now</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</ng-template>
 
+<hr>
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
@@ -29,7 +60,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let emp of employees; let ind = index; trackBy: f1;">
+    <tr *ngFor="let emp of employees; let ind = index; trackBy: f1">
       <td>{{ emp.eId }}</td>
       <td>{{ emp.name }}</td>
       <td>{{ emp.sal }}</td>

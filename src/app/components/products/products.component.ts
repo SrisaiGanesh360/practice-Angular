@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
- products = // 20230429180840
+ 
+  flag: boolean = false;
+ 
+  products = // 20230429180840
  // https://fakestoreapi.com/products
  [
    {
