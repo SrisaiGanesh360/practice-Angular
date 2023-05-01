@@ -268,7 +268,7 @@ updatetable(){
     { eId: 106, name: 'Srija', sal: 1500},
   ];
 }
-trackByEmpId(employee: any){
+f1(employee: any){
   return employee.eId;
 }
 }
