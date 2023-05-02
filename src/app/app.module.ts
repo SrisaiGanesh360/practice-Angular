@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { ProductsComponent } from './components/products/products.component';
 import { UsersComponent } from './components/users/users.component';
+import { GreetComponent } from './components/greet/greet.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { UsersComponent } from './components/users/users.component';
     DatabindingComponent,
     DirectivesComponent,
     ProductsComponent,
-    UsersComponent
+    UsersComponent,
+    GreetComponent
   ],
   imports: [
     BrowserModule,
