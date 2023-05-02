@@ -62,5 +62,31 @@
 >
   {{ n }} is {{ n % 2 === 0 ? "Even" : "Odd" }}
 </p>
-<button class="btn" [ngClass]="flag ? 'btn-success' : 'btn-danger'">Button</button>
+<button class="btn" [ngClass]="flag ? 'btn-success' : 'btn-danger'">
+  Button
+</button>
 <!--to dyanmically add class [ngClass] is used-->
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Roll</th>
+      <th>Name</th>
+      <th>Marks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngIf="students.length > 0; else noRecord"> <!--ngContainer will never be visible inside the DOM-->
+      <tr *ngFor="let std of students">
+        <td>{{ std?.roll }}</td>
+        <td>{{ std?.name }}</td>
+        <td>{{ std?.marks }}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+<ng-template #noRecord>
+  <tr colspan="2" align="center">
+    No Record found
+  </tr>
+</ng-template>

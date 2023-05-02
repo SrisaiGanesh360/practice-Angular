@@ -228,4 +228,6 @@ export class DirectivesComponent {
     { name: 'Kerala', val: 'KL'}
   ];
   selectedCountry2: string = '';
+
+  students: any = [];
 }
