@@ -62,3 +62,5 @@
 >
   {{ n }} is {{ n % 2 === 0 ? "Even" : "Odd" }}
 </p>
+<button class="btn" [ngClass]="flag ? 'btn-success' : 'btn-danger'">Button</button>
+<!--to dyanmically add class [ngClass] is used-->
