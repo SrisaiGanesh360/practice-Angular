@@ -1,1 +1,20 @@
-<p>product-list works!</p>
+<h1 class="text-center bg-success text-white p-2">Product List</h1>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let prod of products">
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">
+                    <img src={{prod.image}} class="card-img-top" style="height:150px" alt="image"/>
+                    <div class="card-body text-center">
+                      <h5 class="card-title">{{prod.title}}</h5>
+                      <p class="card-text">{{prod.category}}</p>
+                      <p class="card-text">Price: {{prod.price}}</p>
+                      <p class="card-text">Rating: {{prod.rating.rate}}</p>
+                      <a class="btn btn-primary">Buy Now</a>
+                    </div>
+                  </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

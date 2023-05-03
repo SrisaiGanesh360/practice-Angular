@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +38,9 @@ import { ProductListComponent } from './components/product-list/product-list.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
+    InfiniteScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
