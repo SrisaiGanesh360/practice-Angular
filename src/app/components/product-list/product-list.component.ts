@@ -4,9 +4,9 @@ import * as data from './products_data.json';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent {
-products = (data as any).default;
-
+  products = (data as any).default;
+  p: number = 2;
 }
