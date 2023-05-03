@@ -15,6 +15,7 @@ import { DirectivesComponent } from './components/directives/directives.componen
 import { ProductsComponent } from './components/products/products.component';
 import { UsersComponent } from './components/users/users.component';
 import { GreetComponent } from './components/greet/greet.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { GreetComponent } from './components/greet/greet.component';
     DirectivesComponent,
     ProductsComponent,
     UsersComponent,
-    GreetComponent
+    GreetComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
