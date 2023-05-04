@@ -8,5 +8,6 @@ import * as data from './products_data.json';
 })
 export class ProductListComponent {
   products = (data as any).default;
-  p: number = 2;
+  p: number = 1;
+  searchText: string = '';
 }
