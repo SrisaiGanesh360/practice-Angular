@@ -19,6 +19,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { UsersComponent } from './components/users/users.component';
 import { GreetComponent } from './components/greet/greet.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { NumberonlyDirective } from './custom-directves/numberonly.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
     ProductsComponent,
     UsersComponent,
     GreetComponent,
-    ProductListComponent
+    ProductListComponent,
+    NumberonlyDirective
   ],
   imports: [
     BrowserModule,
