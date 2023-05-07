@@ -12,4 +12,5 @@ export class PipesComponent {
   today: Date = new Date();
   emp = { id : 101, name : 'Srisai', sal: 500000 };
   cars: string[] = ['Tata', 'Mahindra', 'Toyota', 'Maruti', 'Hundai', 'Honda'];
+  msg: string ='';
 }

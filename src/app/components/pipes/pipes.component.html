@@ -39,3 +39,7 @@
 <h4><u>Date Chaining:</u></h4>
 <h4>{{today | date | uppercase }}</h4>
 <h4>{{today | date | lowercase }}</h4>
+<hr>
+<textarea [(ngModel)]="msg" maxlength="100" cols="30" rows="5"></textarea>
+<h4>Message is {{msg}}</h4>
+<h4>Remaining characters are {{msg | remaining}}</h4>
