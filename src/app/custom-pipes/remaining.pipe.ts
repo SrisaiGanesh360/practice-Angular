@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'remaining',
 })
 export class RemainingPipe implements PipeTransform {
-  transform(input: string) {
-    return 100 - input.length;
+  transform(msg: string, maxChar: number) {
+    return maxChar - msg.length;
   }
 }
