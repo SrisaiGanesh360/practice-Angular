@@ -21,6 +21,7 @@ import { GreetComponent } from './components/greet/greet.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { NumberonlyDirective } from './custom-directves/numberonly.directive';
 import { HighlightDirective } from './custom-directves/highlight.directive';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HighlightDirective } from './custom-directves/highlight.directive';
     GreetComponent,
     ProductListComponent,
     NumberonlyDirective,
-    HighlightDirective
+    HighlightDirective,
+    PipesComponent
   ],
   imports: [
     BrowserModule,

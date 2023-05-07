@@ -1,0 +1,41 @@
+<p>pipes works!</p>
+<h2>Name : {{ name }}</h2>
+<h2>Name : {{ name | uppercase }}</h2>
+<h2>Name : {{ name | lowercase }}</h2>
+<h2>Name : {{ name | titlecase }}</h2>
+<br />
+<h2>{{ mySal }}</h2>
+<h2>{{ mySal | currency }}</h2>
+<h2>{{ mySal | currency : "INR" }}</h2>
+<h2>{{ mySal | currency : "&euro;" }}</h2>
+<h2>{{ mySal | currency : "&yen;" }}</h2>
+<br />
+<h2>{{ today }}</h2>
+<h2>{{ today | date }}</h2>
+<h2>{{ today | date : "fullDate" }}</h2>
+<h2>{{ today | date : "mediumDate" }}</h2>
+<h2>{{ today | date : "shortDate" }}</h2>
+<h2>{{ today | date : "fullTime" }}</h2>
+<h2>{{ today | date : "mediumTime" }}</h2>
+<h2>{{ today | date : "shortTime" }}</h2>
+<h2>{{ today | date : "dd-MM-yyyy" }}</h2>
+<h2>{{ today | date : "dd MM yyyy" }}</h2>
+<h2>{{ today | date : "MMMM dd yyyy" }}</h2>
+<h2>{{ today | date : "fullTime" : "utc" }}</h2>
+<br />
+<h3>{{ 12.3555555 | number : "3.2-4" }}</h3>
+<br />
+<h3>{{ 0.53 | percent }}</h3>
+<br />
+<h3>{{ emp | json }}</h3>
+<hr />
+<h3 *ngFor="let entry of emp | keyvalue">
+  Value for key {{ entry.key }} is {{ entry.value }}
+</h3>
+<hr />
+<h4>{{ cars }}</h4>
+<h4>{{ cars | slice : 2 : 4 }}</h4>
+<hr>
+<h4><u>Date Chaining:</u></h4>
+<h4>{{today | date | uppercase }}</h4>
+<h4>{{today | date | lowercase }}</h4>
