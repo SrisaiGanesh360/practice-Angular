@@ -23,6 +23,7 @@ import { NumberonlyDirective } from './custom-directves/numberonly.directive';
 import { HighlightDirective } from './custom-directves/highlight.directive';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { RemainingPipe } from './custom-pipes/remaining.pipe';
+import { OrdinalPipe } from './custom-pipes/ordinal.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { RemainingPipe } from './custom-pipes/remaining.pipe';
     NumberonlyDirective,
     HighlightDirective,
     PipesComponent,
-    RemainingPipe
+    RemainingPipe,
+    OrdinalPipe
   ],
   imports: [
     BrowserModule,
