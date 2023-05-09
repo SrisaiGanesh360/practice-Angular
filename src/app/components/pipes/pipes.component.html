@@ -46,3 +46,22 @@
 <hr>
 <input [(ngModel)]="cardinal" type="number" />
 <h3>Cardinal number is {{cardinal}} , ordinal is {{ cardinal | ordinal }}</h3>
+<hr>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor=" let emp of employees">
+      <td>{{emp.eId}}</td>
+      <td>{{emp.name | titlecase | nameprefix : emp.gender}}</td>
+      <td>{{emp.sal}}</td>
+      <td>{{emp.gender}}</td>
+    </tr>
+  </tbody>
+</table>

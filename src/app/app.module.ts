@@ -24,6 +24,7 @@ import { HighlightDirective } from './custom-directves/highlight.directive';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { RemainingPipe } from './custom-pipes/remaining.pipe';
 import { OrdinalPipe } from './custom-pipes/ordinal.pipe';
+import { NameprefixPipe } from './custom-pipes/nameprefix.pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { OrdinalPipe } from './custom-pipes/ordinal.pipe';
     HighlightDirective,
     PipesComponent,
     RemainingPipe,
-    OrdinalPipe
+    OrdinalPipe,
+    NameprefixPipe
   ],
   imports: [
     BrowserModule,
