@@ -9,8 +9,8 @@ export class MyfilterPipe implements PipeTransform {
   	if (!search) return employees;
 
   	search = search.toLowerCase();
-  	return employees.filter(employees => {
-  		return JSON.stringify(employees).toLowerCase().includes(search);
+  	return employees.filter(emp => {
+  		return emp.name.toLowerCase().includes(search);
   	});
   }
 }
