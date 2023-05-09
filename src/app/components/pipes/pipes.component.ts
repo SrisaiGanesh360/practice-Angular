@@ -21,4 +21,5 @@ export class PipesComponent {
     { eId: 102, name: 'sita', sal: 9000, gender: 'fmale' },
   ];
   search: string = '';
+  longStr:string = 'this is a long string, truncate pipe example,hello hai bye bye'
 }
