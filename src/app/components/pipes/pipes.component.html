@@ -51,7 +51,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6 offset-3">
-      <input type="search" [(ngModel)]="search" placeholder="Search..."/>
+      <input type="search" [(ngModel)]="search" placeholder="Search..." />
     </div>
   </div>
 </div>
@@ -65,7 +65,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let emp of employees | myfilter:search">
+    <tr *ngFor="let emp of employees | myfilter : search : 'name'">
       <td>{{ emp.eId }}</td>
       <td>{{ emp.name | titlecase | nameprefix : emp.gender }}</td>
       <td>{{ emp.sal }}</td>
