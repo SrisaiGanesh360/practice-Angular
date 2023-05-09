@@ -44,5 +44,5 @@
 <h4>Message is {{ msg }}</h4>
 <h4>Remaining characters are {{ msg | remaining : 100 }}</h4>
 <hr>
-<input [(ngModel)]="cardinal" />
+<input [(ngModel)]="cardinal" type="number" />
 <h3>Cardinal number is {{cardinal}} , ordinal is {{ cardinal | ordinal }}</h3>
