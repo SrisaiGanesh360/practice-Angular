@@ -25,6 +25,7 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { RemainingPipe } from './custom-pipes/remaining.pipe';
 import { OrdinalPipe } from './custom-pipes/ordinal.pipe';
 import { NameprefixPipe } from './custom-pipes/nameprefix.pipe';
+import { MyfilterPipe } from './custom-pipes/myfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,9 @@ import { NameprefixPipe } from './custom-pipes/nameprefix.pipe';
     PipesComponent,
     RemainingPipe,
     OrdinalPipe,
-    NameprefixPipe
+    NameprefixPipe,
+    MyfilterPipe,
+    
   ],
   imports: [
     BrowserModule,

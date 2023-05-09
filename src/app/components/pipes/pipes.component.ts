@@ -20,4 +20,5 @@ export class PipesComponent {
     { eId: 103, name: 'ranjan', sal: 7000, gender: 'female' },
     { eId: 102, name: 'sita', sal: 9000, gender: 'fmale' },
   ];
+  search: string = '';
 }

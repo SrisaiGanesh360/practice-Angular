@@ -43,10 +43,18 @@
 <textarea [(ngModel)]="msg" maxlength="100" cols="30" rows="5"></textarea>
 <h4>Message is {{ msg }}</h4>
 <h4>Remaining characters are {{ msg | remaining : 100 }}</h4>
-<hr>
+<hr />
 <input [(ngModel)]="cardinal" type="number" />
-<h3>Cardinal number is {{cardinal}} , ordinal is {{ cardinal | ordinal }}</h3>
-<hr>
+<h3>Cardinal number is {{ cardinal }} , ordinal is {{ cardinal | ordinal }}</h3>
+<hr />
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 offset-3">
+      <input type="search" [(ngModel)]="search" placeholder="Search..."/>
+    </div>
+  </div>
+</div>
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
@@ -57,11 +65,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor=" let emp of employees">
-      <td>{{emp.eId}}</td>
-      <td>{{emp.name | titlecase | nameprefix : emp.gender}}</td>
-      <td>{{emp.sal}}</td>
-      <td>{{emp.gender}}</td>
+    <tr *ngFor="let emp of employees | myfilter:search">
+      <td>{{ emp.eId }}</td>
+      <td>{{ emp.name | titlecase | nameprefix : emp.gender }}</td>
+      <td>{{ emp.sal }}</td>
+      <td>{{ emp.gender }}</td>
     </tr>
   </tbody>
 </table>
