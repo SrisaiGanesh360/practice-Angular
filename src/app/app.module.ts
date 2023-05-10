@@ -27,6 +27,7 @@ import { OrdinalPipe } from './custom-pipes/ordinal.pipe';
 import { NameprefixPipe } from './custom-pipes/nameprefix.pipe';
 import { MyfilterPipe } from './custom-pipes/myfilter.pipe';
 import { TruncatePipe } from './custom-pipes/truncate.pipe';
+import { MysortPipe } from './custome-pipes/mysort.pipe';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { TruncatePipe } from './custom-pipes/truncate.pipe';
     NameprefixPipe,
     MyfilterPipe,
     TruncatePipe,
+    MysortPipe,
     
   ],
   imports: [
