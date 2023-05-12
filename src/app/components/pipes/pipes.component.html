@@ -46,6 +46,8 @@
 <hr />
 <input [(ngModel)]="cardinal" type="number" />
 <h3>Cardinal number is {{ cardinal }} , ordinal is {{ cardinal | ordinal }}</h3>
+<h3>Another ordinal is {{ordinalRes}}</h3>
+<button (click)="convertToOrdinal()">Get Ordinal Value</button>
 <hr />
 
 <div class="container">

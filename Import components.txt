@@ -170,3 +170,12 @@ How to use SweetAlert	( also look at snackbar for angular )
 3. on button click call a function, which has the below code	
    Swal.fire('Good job!', 'You clicked the button!', 'success');
 
+Use custom pipes in component file
+-=================================
+1. import pipe class to the component	
+   import { RemainingPipe } from 'src/app/custom-pipes/remaining.pipe';
+   
+2. create an instance of that pipe and call transform() with that instance
+   const pipeObj = new RemainingPipe();
+   const remainingChar = pipeObj.transform('hello', 100);
+   console.log(remainingChar);

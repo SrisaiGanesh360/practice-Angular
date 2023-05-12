@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OrdinalPipe } from 'src/app/custom-pipes/ordinal.pipe';
 
 @Component({
   selector: 'app-pipes',
@@ -13,6 +14,12 @@ export class PipesComponent {
   cars: string[] = ['Tata', 'Mahindra', 'Toyota', 'Maruti', 'Hundai', 'Honda'];
   msg: string = '';
   cardinal: number = 21;
+  ordinalRes: string = '21st';
+
+  convertToOrdinal() {
+    const ordinalPipeObj = new OrdinalPipe();
+    this.ordinalRes = ordinalPipeObj.transform(this.cardinal)
+  }
 
   employees = [
     { eId: 101, name: 'sanjay', sal: 5000, gender: 'male' },
