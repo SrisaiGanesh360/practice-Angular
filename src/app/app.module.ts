@@ -31,6 +31,8 @@ import { MysortPipe } from './custome-pipes/mysort.pipe';
 import { ParentComponent } from './components/parent/parent.component';
 import { Child1Component } from './components/child1/child1.component';
 import { Child2Component } from './components/child2/child2.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { CategoryComponent } from './components/category/category.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { Child2Component } from './components/child2/child2.component';
     ParentComponent,
     Child1Component,
     Child2Component,
+    CategoriesComponent,
+    CategoryComponent,
     
   ],
   imports: [
