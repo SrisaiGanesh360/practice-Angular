@@ -28,6 +28,9 @@ import { NameprefixPipe } from './custom-pipes/nameprefix.pipe';
 import { MyfilterPipe } from './custom-pipes/myfilter.pipe';
 import { TruncatePipe } from './custom-pipes/truncate.pipe';
 import { MysortPipe } from './custome-pipes/mysort.pipe';
+import { ParentComponent } from './components/parent/parent.component';
+import { Child1Component } from './components/child1/child1.component';
+import { Child2Component } from './components/child2/child2.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +56,9 @@ import { MysortPipe } from './custome-pipes/mysort.pipe';
     MyfilterPipe,
     TruncatePipe,
     MysortPipe,
+    ParentComponent,
+    Child1Component,
+    Child2Component,
     
   ],
   imports: [
