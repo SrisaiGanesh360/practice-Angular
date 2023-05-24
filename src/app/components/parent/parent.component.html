@@ -4,13 +4,15 @@
         <p>My own data is {{a}}</p>
         <p>My own data is {{b}}</p>
         <p><input type="number" [(ngModel)]="a"></p>
+        <p>Name from Child2 is {{pName}}</p> <!--Child is pushing data here-->
+        <p>Name from Child2 is {{child2.name}}</p> <!--Parent is pulling data from child. It can pull everything, this not the right way, decreases performance-->
     </div>
     <div class="row border mt-2">
         <div class="col-sm-6 border">
-            <app-child1 [Child1a]="a" [f1] = "f1"></app-child1> <!--Right value is parent left is child--> <!--Using property binding-->
+            <app-child1 [Child1a]="a" [f1] = "f1" [pName] = pName [child2] = "child2"></app-child1> <!--Right value is parent left is child--> <!--Using property binding-->
         </div>
         <div class="col-sm-6 border">
-            <app-child2 [b]="b"></app-child2>
+            <app-child2 [b]="b" (nameEvent)="recieveName($event)" #child2></app-child2>
         </div>
     </div>
 </div>
