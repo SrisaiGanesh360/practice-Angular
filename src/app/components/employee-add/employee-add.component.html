@@ -1,1 +1,15 @@
-<p>employee-add works!</p>
+<h2 class="text-center">Employee List</h2>
+
+<div>
+    <p>
+        Eid: <input #eid>
+    </p>
+    <p>
+        Name: <input #name>
+    </p>
+    <p>
+        Salary: <input #sal>
+    </p>
+
+    <button class="btn btn-primary" (click)="addEmp(eid.value, name.value, sal.value)">ADD</button>
+</div>

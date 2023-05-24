@@ -1,1 +1,21 @@
-<p>employee-list works!</p>
+<h3 class="text-center">Employees List</h3>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>EID</th>
+      <th>Name</th>
+      <th>Salaru</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.eid }}</td>
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.sal }}</td>
+      <td>
+        <button class="btn btn-danger">DEL</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
