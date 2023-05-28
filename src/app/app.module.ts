@@ -37,6 +37,7 @@ import { EmployeeCrudComponent } from './components/employee-crud/employee-crud.
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
 import { EmployeeCardsComponent } from './components/employee-cards/employee-cards.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { EmployeeCardsComponent } from './components/employee-cards/employee-car
     EmployeeListComponent,
     EmployeeAddComponent,
     EmployeeCardsComponent,
+    CartComponent,
     
   ],
   imports: [
