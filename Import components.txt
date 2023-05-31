@@ -179,3 +179,10 @@ Use custom pipes in component file
    const pipeObj = new RemainingPipe();
    const remainingChar = pipeObj.transform('hello', 100);
    console.log(remainingChar);
+
+The hooks/lifecycle methods are executed in this order: // Session 45 21st JAN 2023
+--------------------------------------------------------
+constructor()
+-This is invoked when Angular creates a component or directive by calling new on the class.
+-Initialize class members,dependency Injection.
+-No Business Logic should be written in constructor.
