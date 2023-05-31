@@ -1,5 +1,5 @@
 <p>child2 works!</p>
 <p>b data from my parent is {{b}}</p>
 <div>My own data name is {{name}}</div>
-<input [(ngModel)]="name"/>
+<input [(ngModel)]="name" #nameBox/>
 <button (click)="sendDataToParent()">Send Data to Parent</button>

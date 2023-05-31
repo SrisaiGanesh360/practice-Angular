@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter } from '@angular/core';
+import { Component, Input, EventEmitter, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-child2',
@@ -10,8 +10,23 @@ export class Child2Component {
   @Input() b: any;
   name: string = 'Srisai Ganesh';
 
+  @ViewChild('nameBox') nameBox:any; // is equivalent to document.getElementById('abc')
+
   nameEvent = new EventEmitter(); // is a class from core components
   sendDataToParent() {
     this.nameEvent.emit(this.name);
   }
+
+  constructor(){
+    console.log(this.nameBox) 
+  }
+
+  ngOnInit(): void {}
+
+  ngAfterViewInit() {
+    console.log(this.nameBox);
+    this.nameBox.nativeElement.focus();
+    this.nameBox.nativeElement.style.color = 'red';
+  }
+
 }
