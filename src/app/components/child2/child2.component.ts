@@ -18,12 +18,12 @@ export class Child2Component {
   }
 
   constructor(){
-    console.log(this.nameBox) 
+    console.log(this.nameBox)  // for dependency injection
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {} // for API
 
-  ngAfterViewInit() {
+  ngAfterViewInit() {  // for DOM manipulation
     console.log(this.nameBox);
     this.nameBox.nativeElement.focus();
     this.nameBox.nativeElement.style.color = 'red';
