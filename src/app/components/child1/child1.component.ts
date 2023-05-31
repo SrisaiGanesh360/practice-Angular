@@ -25,6 +25,6 @@ export class Child1Component {
 
   constructor(private changeDetectorRef: ChangeDetectorRef) {}
   ngDoCheck() {
-    this.changeDetectorRef.markForCheck();
+    // this.changeDetectorRef.markForCheck();
   }
 }
