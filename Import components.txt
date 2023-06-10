@@ -186,3 +186,17 @@ constructor()
 -This is invoked when Angular creates a component or directive by calling new on the class.
 -Initialize class members,dependency Injection.
 -No Business Logic should be written in constructor.
+
+ChangeDetector
+-------------
+- Session 46
+- Pushing changes from parent to child
+- changeDetection: ChangeDetectionStrategy.OnPush
+- changeDetection: ChangeDetectionStrategy.Default
+- ngDoCheck() {
+    this.changeDetectorRef.markForCheck();
+  }
+
+@ViewChild
+----------
+ngAfterViewInit() {} for DOM manipulations

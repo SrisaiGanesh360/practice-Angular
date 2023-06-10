@@ -20,7 +20,7 @@ export class Child1Component {
   arr: any;
 
   refresh() {
-    // this.changeDetectorRef.markForCheck();
+    // this.changeDetectorRef.markForCheck(); this is in cunstructor now
   }
 
   constructor(private changeDetectorRef: ChangeDetectorRef) {}
