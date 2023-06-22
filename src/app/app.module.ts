@@ -38,6 +38,8 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
 import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
 import { EmployeeCardsComponent } from './components/employee-cards/employee-cards.component';
 import { CartComponent } from './components/cart/cart.component';
+import { Mathdemo1Component } from './components/mathdemo1/mathdemo1.component';
+import { Mathdemo2Component } from './components/mathdemo2/mathdemo2.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +75,8 @@ import { CartComponent } from './components/cart/cart.component';
     EmployeeAddComponent,
     EmployeeCardsComponent,
     CartComponent,
+    Mathdemo1Component,
+    Mathdemo2Component,
     
   ],
   imports: [
