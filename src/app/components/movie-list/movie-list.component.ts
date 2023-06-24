@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
@@ -6,15 +6,20 @@ import { MovieService } from 'src/app/services/movie.service';
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.css'],
 })
-export class MovieListComponent {
+export class MovieListComponent implements OnInit {
   movies: any;
 
-  constructor(private movieService: MovieService) {}
-
+  constructor(private movieService: MovieService) {
+    // console.log(this.movieService.allMovies);
+  }
   ngOnInit(): void {
     this.movies = this.movieService.getAllMovies();
   }
   getMovies(category:string){
-    this.movies = this.movieService.getHorrorMovies;
+    // filter in the component
+    this.movies = this.movieService.getFilteredMovies(category);
+  }
+  getAllMovies(){
+    this.movies = this.movieService.getAllMovies();
   }
 }
