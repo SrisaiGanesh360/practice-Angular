@@ -1,0 +1,19 @@
+<h2 class="text-center">Movie List</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let movie of movies">
+            <div class="col-sm-3">
+                <div class="card text-center" style="width: 18rem;">
+                    <img src="https://rukminim1.flixcart.com/image/200/200/printer/j/j/y/hp-laserjet-m1005-multifunction-original-imadxhzpeb9qbrfg.jpeg?q=70" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{movie.name}}</h5>
+                      <p class="card-text">{{movie.id}}</p>
+                      <p class="card-text">{{movie.category}}</p>
+                      <p class="card-text">{{movie.rating}}</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button onclick="getMovies('horror')">Horror</button>

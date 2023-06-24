@@ -40,6 +40,7 @@ import { EmployeeCardsComponent } from './components/employee-cards/employee-car
 import { CartComponent } from './components/cart/cart.component';
 import { Mathdemo1Component } from './components/mathdemo1/mathdemo1.component';
 import { Mathdemo2Component } from './components/mathdemo2/mathdemo2.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +78,7 @@ import { Mathdemo2Component } from './components/mathdemo2/mathdemo2.component';
     CartComponent,
     Mathdemo1Component,
     Mathdemo2Component,
+    MovieListComponent,
     
   ],
   imports: [
